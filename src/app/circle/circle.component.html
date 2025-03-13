@@ -1,0 +1,11 @@
+<div class="circlepage">
+    <div class="circlebox">
+        <h2>Circle</h2>
+        
+        <label>Radius </label><input id="number" type="number" [(ngModel)]="radius"><br>  
+        <div class="buttons">
+        <button id="area" (click)="area()"[disabled]="!radius">Area</button><button id="area" (click)="peri()"[disabled]="!radius">Perimeter</button>
+        </div>
+        <h1>Result:</h1><h1>{{result}}</h1>
+    </div>
+    </div>

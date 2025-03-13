@@ -1,0 +1,11 @@
+<div class="calcipage">
+<div class="calcibox">
+    <h2>Calculator</h2>
+    <label>#1</label><input id="number1" type="number" [(ngModel)]="number1"><br>
+    <label>#2</label><input id="number1" type="number" [(ngModel)]="number2"><br>
+    <div class="buttons">
+    <button id="add" (click)="add()" [disabled]="!number1 || !number2">Add</button><button id="add" (click)="sub()" [disabled]="!number1 || !number2">Subtract</button><button id="add" (click)="mul()" [disabled]="!number1 || !number2">Multiply</button><button id="add" (click)="div()" [disabled]="!number1 || !number2">Divide</button>
+    </div>
+    <h1>{{result}}</h1>
+</div>
+</div>
