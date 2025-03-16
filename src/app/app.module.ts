@@ -16,6 +16,9 @@ import { EmiComponent } from './emi/emi.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
 import { ExitComponent } from './exit/exit.component';
+import { LoginComponent } from './login/login.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { WebsiteanimationComponent } from './websiteanimation/websiteanimation.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ExitComponent } from './exit/exit.component';
     EmiComponent,
     TemperatureComponent,
     SimpleInterestComponent,
-    ExitComponent
+    ExitComponent,
+    LoginComponent,
+    DirectivesComponent,
+    WebsiteanimationComponent
   ],
   imports: [
     BrowserModule,

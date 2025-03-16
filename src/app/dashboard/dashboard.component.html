@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+<div class="mainpage">
+    <div class="left">
+        <div class="left1">
+          <h5 routerLink="websiteanimation">My Website</h5>
+        </div>
+        <hr>
+        <div class="left2">
+          <p routerLink="home">Home</p>
+          <p routerLink="welcome">Welcome</p>
+          <p routerLink="databinding">Data Binding</p>
+          <p routerLink="calculator">Calculator</p>
+          <p routerLink="rectangle">Rectangle</p>
+          <p routerLink="circle">Circle</p>
+          <p routerLink="bmi">BMI</p>
+          <p routerLink="emi">EMI</p>
+          <p routerLink="temperature">Termperature</p>
+          <p routerLink="SimpleInterest">Simple Interest</p>
+          <p routerLink="directives">Directives</p>
+        </div>
+        <hr>
+        <div class="left3">
+          <button id="button" routerLink="/exit"><b>Logout</b></button>
+        </div>
+        
+    </div>
+    <div class="right">
+      <router-outlet></router-outlet>
+      <div class="rightcenterbox">
+        <router-outlet></router-outlet>
+        
+      </div>
+    </div>
+  </div>
+
+

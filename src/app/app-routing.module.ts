@@ -12,27 +12,34 @@ import { EmiComponent } from './emi/emi.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
 import { ExitComponent } from './exit/exit.component';
+import { LoginComponent } from './login/login.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { WebsiteanimationComponent } from './websiteanimation/websiteanimation.component';
 
 const routes: Routes = [
-  {path:'', component:DashboardComponent},
-  {path:'exit',component:ExitComponent},
-  {
-    path: '',
-    component: DashboardComponent,
-    children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'welcome', component: WelcomeComponent },
-      { path: 'databinding', component: DatabindingComponent },
-      { path: 'calculator', component: CalculatorComponent },
-      { path: 'rectangle', component: RectangleComponent },
-      { path: 'circle', component: CircleComponent },
-      { path: 'bmi', component: BmiComponent },
-      { path: 'emi', component: EmiComponent},
-      { path: 'temperature', component: TemperatureComponent},
-      { path: 'SimpleInterest', component: SimpleInterestComponent},
-    ]
-  }
-];
+  {path:'', component:LoginComponent},
+  {path: 'dashboard', component: DashboardComponent, 
+      children: [
+        {path: 'websiteanimation', component: WebsiteanimationComponent},
+        { path: 'home', component: HomeComponent },
+        { path: 'welcome', component: WelcomeComponent },
+        { path: 'databinding', component: DatabindingComponent },
+        { path: 'calculator', component: CalculatorComponent },
+        { path: 'rectangle', component: RectangleComponent },
+        { path: 'circle', component: CircleComponent },
+        { path: 'bmi', component: BmiComponent },
+        { path: 'emi', component: EmiComponent},
+        { path: 'temperature', component: TemperatureComponent},
+        { path: 'SimpleInterest', component: SimpleInterestComponent},
+        { path: 'directives', component: DirectivesComponent},
+      ]
+    },
+    {path:'exit',component:ExitComponent}
+
+  ]
+ 
+  
+
 
 
 @NgModule({
