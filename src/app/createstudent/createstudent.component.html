@@ -1,0 +1,20 @@
+<div class="form">
+<form [formGroup]="studentForm">
+        <label>Name:</label>
+        <input type="text" formControlName="name"><br><br>
+        <label>Phone:</label>
+        <input type="text" formControlName="phone"><br><br>
+        <label>D-O-B:</label>
+        <input type="text" formControlName="dob"><br><br>
+        <label>City:</label>
+        <input type="text" formControlName="city"><br><br>
+        <label>Email:</label>
+        <input type="text" formControlName="email"><br><br>
+        <label>School Name:</label>
+        <input type="text" formControlName="school_name"><br><br>
+        <label>School Pin:</label>
+        <input type="text" formControlName="school_pin"><br><br>
+        <button (click)="create()" id="greenbutton">Create New Student ID</button>
+    </form>
+</div>
+

@@ -1,0 +1,11 @@
+<div class="mainpage">
+    
+    <div class="box" *ngFor="let pinterest of photoarray">
+        <div class="image"><img [src]="pinterest.download_url" [alt]="" height="200px" width="400px">
+            <div class="author">{{pinterest.author}}</div>
+            <div class="download">
+                <button id="dwnloadbtn">Download<a href="pinterest.url"></a></button>
+            </div> </div>
+               
+    </div>
+</div>

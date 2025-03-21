@@ -1,0 +1,9 @@
+<div class="heading"><h2>FLIPKART with API</h2></div>
+<div class="parent">
+<div class="box" *ngFor="let flipkartpage of flipkarts">
+    <div class="product_image"><img [src]="flipkartpage.image" [alt]="" width="240px" height="240px"></div>
+    <div class="product_title"><b>{{flipkartpage.title}}</b></div>
+    <div class="product_price"><p>Price:{{flipkartpage.price}}</p></div>
+    <div class="product_rating"><p>Rating:{{flipkartpage.rating.rate}}</p></div>
+</div>
+</div>

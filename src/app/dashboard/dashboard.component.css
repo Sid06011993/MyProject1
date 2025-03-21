@@ -22,6 +22,8 @@
     width: 15%;
     height: 100%;
     background-color: rgb(38 70 83);
+    overflow:hidden
+    
 }
 h2{
     margin: 0px;
@@ -36,7 +38,7 @@ h3{
     margin: 0px;
     border: 0px;
     width: 100%;
-    height: 15%;
+    height: 12%;
     background-color: rgb(222,131,20);
     display:flex;
     align-items: center;
@@ -53,10 +55,10 @@ h3{
     margin: 0px;
     border: 0px;
     width: 100%;
-    height: 70%;
-    background-color: rgb(38 70 83);
+    height: 80%;
+    background-color: rgb(28,56,67);
     padding-left: 30px;
-    line-height: 2;
+    line-height: 1.3;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
@@ -66,8 +68,8 @@ h3{
     margin: 0px;
     border: 0px;
     width: 100%;
-    height: 12%;
-    background-color:rgb(38 70 83);
+    height: 8%;
+    background-color:rgb(28,56,67);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,17 +98,10 @@ hr{
     border: 0px;
     width: 85%;
     height: 100%;
-    background-color:rgb(222, 131, 20);
-    display: flex;
+    background-color:rgb(1, 54, 70);
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: auto;
-
-}
-.rightcenterbox{
-    width: 98%;
-    height: 98%;
-    background-color: rgb(38 70 83);
+    align-items: center; */
     overflow: auto;
 }
 

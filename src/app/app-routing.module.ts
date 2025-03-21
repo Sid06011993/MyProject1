@@ -15,6 +15,13 @@ import { ExitComponent } from './exit/exit.component';
 import { LoginComponent } from './login/login.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { WebsiteanimationComponent } from './websiteanimation/websiteanimation.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { StudentComponent } from './student/student.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -32,6 +39,13 @@ const routes: Routes = [
         { path: 'temperature', component: TemperatureComponent},
         { path: 'SimpleInterest', component: SimpleInterestComponent},
         { path: 'directives', component: DirectivesComponent},
+        { path: 'accounts', component: AccountsComponent},
+        { path: 'flipkart', component:FlipkartComponent},
+        { path: 'pinterest',component: PinterestComponent},
+        { path:'weather', component:WeatherComponent},
+        { path:'createaccount', component:CreateaccountComponent},
+        { path:'student',component:StudentComponent},
+        { path:'createstudent',component:CreatestudentComponent}
       ]
     },
     {path:'exit',component:ExitComponent}

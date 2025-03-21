@@ -1,0 +1,10 @@
+<div class="mainpage">
+    <div class="box">
+        <h3>Weather in Hyderabad</h3>
+        <h1>{{currentWeather?.current_weather?.temperature}}</h1>
+        <h2>Time:{{currentWeather?.current_weather?.time | date:'hh:mm a'}} </h2>
+        <h3>Date: {{currentWeather?.current_weather?.time |  date:'dd/MM/yyyy'}}</h3>
+        <p>Wind Speed: {{currentWeather?.current_weather?.windspeed}}</p>
+        <p>Wind Direction:{{currentWeather.current_weather?.winddirection}}</p>
+    </div>
+</div>

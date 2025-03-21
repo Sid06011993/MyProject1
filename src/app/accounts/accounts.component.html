@@ -1,0 +1,24 @@
+<button routerLink="/dashboard/createaccount">Create a New Account</button>
+<br>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Sr. No</th>
+            <th>Account Name</th>
+            <th>Available Balance</th>
+            <th>Account Number</th>
+            <th>City</th>
+            <th>Profile Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td><img [src]="account.profie_picture" [alt]="" width="100px" height="60px"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,158 @@
+.mainpage{
+    width:100%;
+    height: 100%;
+    background-color: beige;
+}
+.header{
+    width: 100%;
+    height:12%;
+    background-color: rgb(28, 56, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+.header1{
+    width:30%;
+    height: 100%;
+    background-color: rgb(28, 56, 67);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header2{
+    width:35%;
+    height: 100%;
+    background-color: rgb(28, 56, 67);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header3{
+    width:35%;
+    height: 100%;
+    background-color: rgb(28, 56, 67);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#textbox{
+    width: 200px;
+    height: 30px;
+    border-radius: 7px;
+}
+#dropdown1{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+#dropdown2{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+}
+.footer{
+    width: 100%;
+    height:88%;
+    background-color: rgb(247, 164, 64);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow:auto;
+}
+.card{
+    border:none;
+    margin: 0px;
+    width: 30%;
+    height:45%;
+    background-color: rgb(153, 40, 40);
+    margin-top: 20px;
+}
+.cardtop{
+    width: 100%;
+    height:18%;
+    background-color: rgb(38,70,83);
+    display:flex;
+    color: white;
+    gap: 40px;
+}
+.cardmid{
+    width: 100%;
+    height:64%;
+    background-color: rgb(249, 222, 222);
+    display: flex;
+}
+.cardmidleft{
+    width: 60%;
+    height:100%;
+    background-color: white;
+    padding-left: 10px;
+}
+.cardmidright{
+    width: 40%;
+    height:100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardbottom{
+    width: 100%;
+    height:18%;
+    background-color: rgb(38,70,83);
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button1{
+    background-color: rgb(24, 184, 184);
+    width: 70px;
+    height: 25px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+}
+.button2{
+    background-color: rgb(24, 184, 184);
+    width: 70px;
+    height: 25px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+}
+.button3{
+    background-color: crimson;
+    width: 70px;
+    height: 25px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+}
+#greenbutton{
+    background-color: rgb(11, 176, 11);
+    width: 180px;
+    height: 30px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+}
+#sortbutton{
+    background-color: rgb(24, 184, 184);
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+
+}
+#paginatebutton{
+    background-color: rgb(24, 184, 184);
+    width: 90px;
+    height: 30px;
+    border-radius: 7px;
+    color: White;
+    border: none;
+
+}
