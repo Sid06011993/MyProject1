@@ -27,6 +27,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { StudentComponent } from './student/student.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { CreatestudentComponent } from './createstudent/createstudent.component'
     WeatherComponent,
     CreateaccountComponent,
     StudentComponent,
-    CreatestudentComponent
+    CreatestudentComponent,
+    ReactiveformsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class="mainpage">
     <div class="header">
         <div class="header1">
-            <input type="text" id="textbox" placeholder="type here to search" [(ngModel)]="term" (keyup)="filter()">
+            <input type="text" id="textbox" placeholder="type here to search" [(ngModel)]="term" (keydown)="filter()">
             <button routerLink="/dashboard/createstudent" id="greenbutton">Create a New Entry</button>
         </div>
         <div class="header2"><label>Column:</label>

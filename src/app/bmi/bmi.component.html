@@ -1,11 +1,11 @@
 <div class="bmipage">
     <div class="bmibox">
-        <h2>BMI Calculator</h2>
-        <label>Height (in metres) </label><input id="number" type="number" [(ngModel)]="height"><br>
-        <label>Weight (in Kilograms) </label><input id="number" type="number" [(ngModel)]="weight"><br>
-        <button id="bmi" (click)="bmi()" >Calculate</button>
-        <h2>Result:</h2><h2>{{result}}</h2>
-        <h1>{{category}}</h1>
+        <h4>BMI Calculator</h4>
+        <label>Height (in metres) </label><input id="number" type="number" [(ngModel)]="height"><br><br>
+        <label>Weight (in Kilograms) </label><input id="number" type="number" [(ngModel)]="weight"><br><br>
+        <button id="bmi" (click)="bmi()" class="btn btn-primary">Calculate</button>
+        <h3>{{result}}</h3>
+        <h3>{{category}}</h3>
 
     </div>
 </div>

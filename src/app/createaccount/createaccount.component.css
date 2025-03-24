@@ -1,0 +1,20 @@
+#textbox{
+    width: 500px;
+    height: 30px;
+}
+#labelname{
+    width: 150px;
+    height: 30px;
+}
+#bluebutton{
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: rgb(24,184,184);
+    border-radius: 7px;
+    border: none;
+ }
+ .createform{
+    margin-left: 20px;
+    margin-top: 80px;
+ }

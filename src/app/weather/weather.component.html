@@ -1,10 +1,17 @@
 <div class="mainpage">
     <div class="box">
         <h3>Weather in Hyderabad</h3>
-        <h1>{{currentWeather?.current_weather?.temperature}}</h1>
+        <div class="circlebox">
+            <div class="circle1" [ngClass]="{'blue':currentWeather?.current_weather?.temperature>25 && currentWeather?.current_weather?.temperature<=30,'yellow': currentWeather?.current_weather?.temperature<=35 && currentWeather?.current_weather?.temperature>30,'green':currentWeather?.current_weather?.temperature<=45 && currentWeather?.current_weather?.temperature>35}"></div>
+        </div>
+        <h1>{{currentWeather?.current_weather?.temperature}}°C</h1>
         <h2>Time:{{currentWeather?.current_weather?.time | date:'hh:mm a'}} </h2>
         <h3>Date: {{currentWeather?.current_weather?.time |  date:'dd/MM/yyyy'}}</h3>
-        <p>Wind Speed: {{currentWeather?.current_weather?.windspeed}}</p>
-        <p>Wind Direction:{{currentWeather.current_weather?.winddirection}}</p>
+        <p>Wind Speed: {{currentWeather?.current_weather?.windspeed}}km/h</p>
+        <p>Wind Direction:{{currentWeather.current_weather?.winddirection}}°</p>
+        <div class="daytime">
+        <h3 *ngIf="currentWeather.current_weather.is_day==1" [ngStyle]="{'color': 'orange'}">It's Day Time!</h3>
+            <h3 *ngIf="currentWeather.current_weather.is_day==0" [ngStyle]="{'color': 'navyblue'}">Its Night!</h3>
+        </div>
     </div>
 </div>

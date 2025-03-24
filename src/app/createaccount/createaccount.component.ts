@@ -20,7 +20,7 @@ export class CreateaccountComponent {
   constructor(private _accountService:AccountsService, private _router:Router){}
     create(){
       console.log(this.accountForm.value);
-      this._accountService.createVehicle(this.accountForm.value).subscribe(
+      this._accountService.createAccounts(this.accountForm.value).subscribe(
         (data:any)=>{
           alert("New Account Entry Created Successfully");
           this._router.navigateByUrl("/dashboard/accounts");

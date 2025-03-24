@@ -22,9 +22,12 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { StudentComponent } from './student/student.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
+  {path:'', component:LoginComponent,
+  children: [
+    {path: 'websiteanimation', component: WebsiteanimationComponent}]},
   {path: 'dashboard', component: DashboardComponent, 
       children: [
         {path: 'websiteanimation', component: WebsiteanimationComponent},
@@ -45,7 +48,8 @@ const routes: Routes = [
         { path:'weather', component:WeatherComponent},
         { path:'createaccount', component:CreateaccountComponent},
         { path:'student',component:StudentComponent},
-        { path:'createstudent',component:CreatestudentComponent}
+        { path:'createstudent',component:CreatestudentComponent},
+        { path:'reactiveforms', component:ReactiveformsComponent}
       ]
     },
     {path:'exit',component:ExitComponent}

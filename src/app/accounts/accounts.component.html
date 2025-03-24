@@ -1,5 +1,38 @@
-<button routerLink="/dashboard/createaccount">Create a New Account</button>
 <br>
+<div class="top">
+<div class="top1">
+<button id="bluebutton" routerLink="/dashboard/createaccount">Create a New Account</button>
+</div>
+<div class="top2">
+<select [(ngModel)]="column" value="column">
+    <option value="account_name">Account Name</option>
+    <option value="available_balance">Available Balance</option>
+    <option value="account_number">Account Number</option>
+    <option value="city">City</option>
+</select>
+<select [(ngModel)]="order" value="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button id="bluebutton" (click)="sort()">Sort</button>
+</div>
+<div class="top3">
+    <select [(ngModel)]="limit" value="limit">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+    </select>
+    <select [(ngModel)]="page" value="page">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+<button id="bluebutton" (click)="pagination()">Pagination</button>
+</div>
+<br>
+</div>
 <table class="table table-dark">
     <thead>
         <tr>

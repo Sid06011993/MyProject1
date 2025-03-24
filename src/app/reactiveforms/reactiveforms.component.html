@@ -1,0 +1,66 @@
+<div class="mainpage">
+<div class="formpage">
+    <h3>Enter Student Details</h3>
+    <form [formGroup]="userForm">
+    <label id="labelname">Name:</label>
+    <input type="text" formControlName="name" id="textbox"><br>
+    <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">*Name is required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['minlength']">*Minimum Length: 6</p>
+        <p *ngIf="userForm.get('name')?.errors?.['maxlength']">*Maximum Length: 12</p>
+    </div>
+    <label id="labelname">Class:</label>
+    <input type="number" formControlName="class" id="textbox"><br>
+    <label id="labelname">Father's name:</label>
+    <input type="text" formControlName="fatherName" id="textbox"><br>
+    <label id="labelname">Email:</label>
+    <input type="email" formControlName="email" id="textbox"><br>
+    <label id="labelname">D-O-B:</label>
+    <input type="text" formControlName="dob" id="textbox"><br>
+
+    <label id="labelname">Address</label><br>
+    <div formGroupName="address">
+        
+        <label id="labelname">Address Line:</label>
+        <input type="text" formControlName="addressLine" id="textbox"><br>
+        <label id="labelname">City:</label>
+        <input type="text" formControlName="city" id="textbox"><br>
+        <label id="labelname">State:</label>
+        <input type="text" formControlName="state" id="textbox"><br>
+        <label id="labelname">Pin Code:</label>
+        <input type="number" formControlName="pincode" id="textbox"><br>
+    </div>
+        <label id="labelname">Category:</label><br>
+        <label id="labelname1">Day Scholar:</label>
+        <input type="radio" name="type" formControlName="type" value="dayScholar"><br>
+        <label id="labelname1">Residential:</label>
+        <input type="radio" name="type" formControlName="type" value="residential"><br>
+    
+    <div *ngIf="userForm.get('type')?.value=='dayScholar'">
+        <label id="labelname">Bus Fee:</label>
+        <input type="number" formControlName="busFee" id="textbox"><br>
+    </div>
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label id="labelname">Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee" id="textbox"><br>
+    </div>
+
+    <label id="labelname">Year wise Marks</label><br>
+    <button id="greenbutton" (click)="marks()">Yearly Score</button>
+    <div formArrayName="marks">
+        <div *ngFor="let mark of marksFormArray.controls; let i=index">
+        <div formGroupName="{{i}}">
+        <label id="labelname">Score #{{i+1}}</label><br>
+        <label id="labelname">Class:</label>
+        <input type="number" formControlName="class"><br>
+        <label id="labelname">Year:</label>
+        <input type="number" formControlName="year"><br>
+        <label id="labelname">Percentage:</label>
+        <input type="number" formControlName="percentage"><br>
+        <button id="redbutton" (click)="deletemarks(i)">Remove Marks</button>
+    </div>
+</div>
+<br>
+</div>
+<button id="bluebutton" (click)="create()">Submit</button>
+</form>
