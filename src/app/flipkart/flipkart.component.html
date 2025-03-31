@@ -2,8 +2,11 @@
 <div class="parent">
 <div class="box" *ngFor="let flipkartpage of flipkarts">
     <div class="product_image"><img [src]="flipkartpage.image" [alt]="" width="260px" height="220px"></div>
-    <div class="product_title"><b>{{flipkartpage.title | slice:0:60}}</b></div>
+    <div class="rating"><app-ratings [rating]='flipkartpage.rating.rate'></app-ratings></div>
+    <div class="product_title"><b>{{flipkartpage.title | slice:0:50}}</b></div>
     <div class="product_price"><p>Price:{{flipkartpage.price}}</p></div>
-    <div class="product_rating"><p>Rating:{{flipkartpage.rating.rate}}</p></div>
+    
+
+  
 </div>
 </div>

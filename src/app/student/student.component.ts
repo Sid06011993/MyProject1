@@ -7,6 +7,7 @@ import { StudentService } from '../student.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent {
+[x: string]: any;
 studentarray:any=[];
 constructor(private _studentService:StudentService){
   _studentService.getStudents().subscribe(

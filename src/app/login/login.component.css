@@ -1,25 +1,29 @@
-body
-{
-    width: 100vw;
-    height: 100vh;
-}
+
 .mainpage
 {
     height:100%;
     width:100%;
-    color: rgb(38,70,83);
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    text-align: center;
-    margin-top: 300px;
+
+}
+.box{
+    height:100%;
+    width:100%;
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    line-height: 1.1;
+   
 }
 #button
 {
     height:10%;
-    width:30%;
+    width:10%;
     color: rgb(255, 255, 255);
     background-color: rgb(222,131,20);
-    font-size: x-large;
-    border-radius: 15px;
+    font-size: medium;
+    border-radius: 7px;
+}
+#text{
+    width: 300px;
+    height: 30px;
 }

@@ -95,7 +95,7 @@ p:hover{
     color: white;
     box-shadow: 2px 2px 2px rgb(23, 42, 50);
     border: 0;
-    font-size: small;
+    font-size: medium;
     transition: 0.2s ease-in-out;
 }
 #button:hover{

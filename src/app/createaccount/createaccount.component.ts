@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AccountsService } from '../accounts.service';
 
 @Component({
@@ -17,10 +17,32 @@ export class CreateaccountComponent {
     city:new FormControl(),
     profie_picture: new FormControl()
   })
-  constructor(private _accountService:AccountsService, private _router:Router){}
+  id:number=0;
+  constructor(private _accountsService:AccountsService, private _router:Router, private _activatedRouter:ActivatedRoute){
+        _activatedRouter.params.subscribe(
+          (data:any)=>{
+            console.log(data.id);
+            this.id=data.id;
+          },(err:any)=>{
+            alert("Internal Server Error")
+          }
+        )
+
+        if(this.id){
+          _accountsService.getAccount(this.id).subscribe(
+            (data:any)=>{
+              console.log(data);
+              this.accountForm.patchValue(data);
+            },(err:any)=>{
+              alert("Internal Server Error")
+            }
+          )
+        }
+  }
     create(){
+      if(this.id){
       console.log(this.accountForm.value);
-      this._accountService.createAccounts(this.accountForm.value).subscribe(
+      this._accountsService.editAccount(this.id,this.accountForm.value).subscribe(
         (data:any)=>{
           alert("New Account Entry Created Successfully");
           this._router.navigateByUrl("/dashboard/accounts");
@@ -28,6 +50,17 @@ export class CreateaccountComponent {
           alert("Internal Server Error");
         }
         )
+        }else{
+          console.log(this.accountForm.value);
+      this._accountsService.createAccounts(this.accountForm.value).subscribe(
+        (data:any)=>{
+          alert("New Vehicle Created Successfully");
+          this._router.navigateByUrl("/dashboard/accounts");
+        }, (err:any)=>{
+          alert("Internal Server Error");
+        }
+      )
+    }
   }
 }
 

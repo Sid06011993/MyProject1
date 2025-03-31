@@ -42,6 +42,7 @@
             <th>Account Number</th>
             <th>City</th>
             <th>Profile Picture</th>
+            <th style="text-align: center;"colspan="3">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -52,6 +53,10 @@
             <td>{{account.account_number}}</td>
             <td>{{account.city}}</td>
             <td><img [src]="account.profie_picture" [alt]="" width="100px" height="60px"></td>
+            <td><button (click)="delete(account.id)">Delete</button></td>
+            <td><button routerLink="/dashboard/accountdetails/{{account.id}}">View</button></td>
+            <td><button routerLink="/dashboard/createaccount/{{account.id}}">Edit</button></td>
+            
         </tr>
     </tbody>
 </table>

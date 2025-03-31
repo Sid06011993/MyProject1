@@ -23,10 +23,16 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { StudentComponent } from './student/student.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
+import { RatingsComponent } from './ratings/ratings.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent,
   children: [
+    {path: 'websiteanimation', component: WebsiteanimationComponent}]},
+  {path:'login', component:LoginComponent,
+    children: [
     {path: 'websiteanimation', component: WebsiteanimationComponent}]},
   {path: 'dashboard', component: DashboardComponent, 
       children: [
@@ -49,10 +55,14 @@ const routes: Routes = [
         { path:'createaccount', component:CreateaccountComponent},
         { path:'student',component:StudentComponent},
         { path:'createstudent',component:CreatestudentComponent},
-        { path:'reactiveforms', component:ReactiveformsComponent}
+        { path:'reactiveforms', component:ReactiveformsComponent},
+        { path: 'accountdetails/:id', component: AccountdetailsComponent},
+        { path:'createaccount/:id', component:CreateaccountComponent},
+        { path:'viewstudents/:id',component:ViewstudentsComponent},
+        { path:'createstudent/:id',component:CreatestudentComponent},
       ]
     },
-    {path:'exit',component:ExitComponent}
+    {path:'exit',component:LoginComponent}
 
   ]
  

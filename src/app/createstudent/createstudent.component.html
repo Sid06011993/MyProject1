@@ -1,20 +1,29 @@
+<div class="mainpage">
+
 <div class="form">
 <form [formGroup]="studentForm">
-        <label>Name:</label>
-        <input type="text" formControlName="name"><br><br>
-        <label>Phone:</label>
-        <input type="text" formControlName="phone"><br><br>
-        <label>D-O-B:</label>
-        <input type="text" formControlName="dob"><br><br>
-        <label>City:</label>
-        <input type="text" formControlName="city"><br><br>
-        <label>Email:</label>
-        <input type="text" formControlName="email"><br><br>
-        <label>School Name:</label>
-        <input type="text" formControlName="school_name"><br><br>
-        <label>School Pin:</label>
-        <input type="text" formControlName="school_pin"><br><br>
-        <button (click)="create()" id="greenbutton">Create New Student ID</button>
+    <h3 *ngIf="id">Edit Student Details </h3>
+    <h3 *ngIf="!id">Create A New Student Record </h3>
+        <label id="label">Name:</label>
+        <input type="text" formControlName="name" id="textbox"><br><br>
+        <label id="label">Phone:</label>
+        <input type="text" formControlName="phone" id="textbox"><br><br>
+        <label id="label">D-O-B:</label>
+        <input type="text" formControlName="dob" id="textbox"><br><br>
+        <label id="label">City:</label>
+        <input type="text" formControlName="city" id="textbox"><br><br>
+        <label id="label">Email:</label>
+        <input type="text" formControlName="email" id="textbox"><br><br>
+        <label id="label">School Name:</label>
+        <input type="text" formControlName="school_name" id="textbox"><br><br>
+        <label id="label">School Pin:</label>
+        <input type="text" formControlName="school_pin" id="textbox"><br><br>
+        <label id="label">School Logo:</label>
+        <input type="text" formControlName="school_logo" id="textbox"><br><br>
+        <label id="label">Profile Pic:</label>
+        <input type="text" formControlName="profile_picture" id="textbox"><br><br>
+        <button (click)="create()" id="greenbutton">Submit</button>
     </form>
+</div>
 </div>
 

@@ -28,6 +28,9 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { StudentComponent } from './student/student.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
+import { RatingsComponent } from './ratings/ratings.component';
 
 
 @NgModule({
@@ -55,7 +58,10 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
     CreateaccountComponent,
     StudentComponent,
     CreatestudentComponent,
-    ReactiveformsComponent
+    ReactiveformsComponent,
+    AccountdetailsComponent,
+    ViewstudentsComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,
